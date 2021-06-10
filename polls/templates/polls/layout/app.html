@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Name | {{page_title}}</title>
+    <link rel="stylesheet" href="{% static 'assets/styles/style.css' %}">
+    {% block addon-styles %}
+    {% endblock %}
+</head>
+<body>
+<div class="container" >
+
+    <div class="row header">
+        <!-- <header> -->
+
+        <div class="col-6 pull-left">
+            <img class="logo" src="{% static 'assets/img/wikiPoli5 9.png' %}" alt="logo">
+        </div>
+
+        <div class="col-6 pull-left">
+
+            <nav>
+                <ul class="nav pull-right">
+                    <li class="nav-item"><a href="{% url 'index' %}">index</a></li>
+                    <li class="nav-item"><a href="{% url 'contact' %}">contact</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="{% url 'about' %}">about</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- </header> -->
+    </div>
+    <br>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <div class="row footer">
+            <div class="col-3 pull-left">
+                <h1>Company</h1>
+                <p><a href="#">about us</a></p>
+                <p><a href="#">contact</a></p>
+                <p><a href="#">some</a></p>
+                <p></p>
+            </div>
+            <div class="col-3 pull-left">
+                <h1>Company</h1>
+                <p><a href="#">about us</a></p>
+                <p><a href="#">contact</a></p>
+                <p><a href="#">some</a></p>
+            </div>
+            <div class="col-3 pull-left">
+                <h1>Company</h1>
+                <p><a href="#">about us</a></p>
+                <p><a href="#">contact</a></p>
+                <p><a href="#">some</a></p>
+            </div>
+            <div class="col-3 pull-left">
+                <h1>Company</h1>
+                <p><a href="#">about us</a></p>
+                <p><a href="#">contact</a></p>
+                <p><a href="#">some</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

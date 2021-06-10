@@ -1,0 +1,13 @@
+{% extends "../layout/app.html" %}
+{% block content %}
+{% load static %}
+  <div class="galary-view" style="margin: auto">
+    {% for  i in range %}
+      <div class="img-container">
+        <img src="{% static 'assets/img/IMG_20190402_174204_3.jpg' %}" alt="Image">
+        <p>Image from whatever anyway</p>
+      </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
